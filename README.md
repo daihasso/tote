@@ -1,4 +1,6 @@
 # Tote
+[![Build Status](https://travis-ci.com/daihasso/machgo.svg?branch=master)](https://travis-ci.com/daihasso/machgo)
+[![GoDoc](https://godoc.org/github.com/golang/gddo?status.svg)](https://godoc.org/github.com/daihasso/tote)
 
 ## Description
 A configuration fetching framework to take some of the pain out of reading
