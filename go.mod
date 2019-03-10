@@ -1,4 +1,4 @@
-module daihasso.net/library/tote
+module github.com/daihasso/tote
 
 require (
 	github.com/aws/aws-sdk-go v1.16.32
