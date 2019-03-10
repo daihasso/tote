@@ -4,8 +4,8 @@ github.com/aws/aws-sdk-go v1.16.32 h1:/grHp+bt3OAVWkdCQv2YtXkWuu58SuTlH1U8tp25n1
 github.com/aws/aws-sdk-go v1.16.32/go.mod h1:KmX6BPdI08NWTb3/sm4ZGu5ShLoqVDhKgpiN924inxo=
 github.com/daihasso/peechee v0.0.2 h1:EPYobg8h+x/6nFy4hdUCDvk9de1AdT6+OxX6ngPke5I=
 github.com/daihasso/peechee v0.0.2/go.mod h1:lCu3AHA0XG3rKJskaJp24Ctn3mX1QIVxdfYv+3tyMII=
-github.com/daihasso/slogging v0.2.1 h1:LzIx5jn3X48gsdsmupNbNwVEQSrhbOIBBOHuz8Wm9ig=
-github.com/daihasso/slogging v0.2.1/go.mod h1:XroT0uQ7pn/EA2QBQsP3KqG3xSImKGuiGc6JS5xDStg=
+github.com/daihasso/slogging v1.0.1 h1:O1x8RJ+m7GKFeOxYuPOYY8RkveSM9h8toSaMMKYEVl0=
+github.com/daihasso/slogging v1.0.1/go.mod h1:ZFYsvqiVuSjALLlFAwfBHcpApHbR81P/Ur8cmvAvahw=
 github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/djherbis/buffer v1.0.0 h1:6rqC+Sqzr+bnbjlUzLf3+9Tz8CT8YVbdqGRGMZM0H3o=

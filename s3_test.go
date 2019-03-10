@@ -5,7 +5,6 @@ import (
     "testing"
 	"io/ioutil"
 	"net/http"
-    "log"
 
     logging "github.com/daihasso/slogging"
     "github.com/aws/aws-sdk-go/aws"
@@ -19,10 +18,6 @@ import (
 var testBucket = "foo-config"
 var fakeRequestId = "fake"
 var reqDone bool
-
-func testLogger(t *testing.T) *log.Logger {
-	return log.New(testWriter{t}, "test", log.LstdFlags)
-}
 
 type testWriter struct {
 	t *testing.T
@@ -53,17 +48,10 @@ func (self fakeS3) GetObjectWithContext(
 
 func TestReadConfigBasicS3(t *testing.T) {
 	g := gm.NewGomegaWithT(t)
-	logLevels, err := logging.GetLogLevelsForString("DEBUG")
-	if err != nil {
-		panic(err)
-	}
 
-	logger := logging.GetELFLogger(
-		logging.Stdout,
-		logLevels,
-	)
-    logger.SetInternalLogger(testLogger(t))
-	logging.SetDefaultLogger("tests", logger)
+    err := logging.GetRootLogger().SetLogLevel(logging.DEBUG)
+    g.Expect(err).ToNot(gm.HaveOccurred())
+    logging.GetRootLogger().SetWriters(testWriter{t})
 
     fakeConfig := fakeYamlConfigStruct{}
 

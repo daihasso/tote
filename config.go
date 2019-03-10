@@ -88,11 +88,12 @@ func ReadConfig(config interface{}, allOptions ...Option) error {
     for _, path := range paths {
         configReader, err := opts.pathReader.Read(path)
         if err != nil {
-            logging.Warn("Failed to load config data frome file.").With(
-                "error", err,
-            ).And(
-                "path", path,
-            ).Send()
+            logging.Warn(
+                "Failed to load config data from file.", logging.Extras{
+                    "error": err,
+                    "path": path,
+                },
+            )
             continue
         }
         configBytes, err := ioutil.ReadAll(configReader)
